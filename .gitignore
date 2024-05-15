@@ -1,0 +1,69 @@
+# Creado por https://www.toptal.com/developers/gitignore/api/images
+# Editar en https://www.toptal.com/developers/gitignore?templates=images
+
+### Imágenes ###
+# JPEG
+*.jpg
+*.jpeg
+*.jpe
+*.jif
+*.jfif
+*.jfi
+
+# JPEG 2000
+*.jp2
+*.j2k
+*.jpg
+*.jpx
+*.jpm
+*.mj2
+
+# JPEG XR
+*.jxr
+*.hdp
+*.wdp
+
+# Formato de gráficos intercambeable
+*.gif
+
+# CRUDO
+*.crudo
+
+#WebP
+*.webp
+
+# Gráficos de red portátiles
+*.png
+
+# Gráficos de red portátiles animados
+*.apng
+
+# Gráficos de red de múltiples imágenes
+*.mng
+
+# Formato de archivo de imagen etiquetada
+*.pelea
+*.tif
+
+# Gráficas vectoriales escalables
+*.svg
+*.svgz
+
+# Formato de Documento Portable
+*.pdf
+
+# X mapa de bits
+*.xbm
+
+#BMP
+*.bmp
+*.dib
+
+#ICO
+*.ico
+
+# Imágenes 3D
+*.3dm
+*.máx.
+
+# Fin de https://www.toptal.com/developers/gitignore/api/images

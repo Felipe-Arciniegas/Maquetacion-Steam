@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --steam-black: #171a21;
+        --steam-white: #f5f5f5;
+        --steam-green: #1b2838;
+        --steam-blue: #1b91d0;
+        --steam-grey: #2c2f33;
+        --steam-grey-light: #3e3e3e;
+        --steam-grey-lighter: #4f4f4f;
+        --steam-grey-lightest: #6b6b6b;
+        --steam-grey-lightest2: #767676;
+        --steam-grey-lightest3: #8c8c8c;
+        --steam-grey-lightest4: #9d9d9d;
+        --steam-grey-lightest5: #b1b1b1;
+        --steam-grey-lightest6: #c1c1c1;
+        --steam-grey-lightest7: #d1d1d1;
+        --steam-grey-lightest8: #e1e1e1;
+        --steam-grey-lightest9: #f1f1f1;
+        --steam-red: #a00;
+        --steam-red-light: #c00;
+        --steam-red-lighter: #e00;
+        --steam-red-lightest: #f00;
+        --steam-orange: #f50;
+        --steam-orange-light: #f70;
+        --steam-orange-lighter: #f90;
+        --steam-orange-lightest: #fa0;
+        --steam-yellow: #ff0;
+        --steam-yellow-light: #ff3;
+        --steam-yellow-lighter: #ff6;
+        --steam-yellow-lightest: #ff9;
+        --steam-green: #0a0;
+        --steam-green-light: #0c0;
+        --steam-green-lighter: #0e0;
+        --steam-green-lightest: #0f0;
+        --steam-blue: #00a;
+        --steam-blue-light: #00c;
+        --steam-blue-lighter: #00e;
+        --steam-blue-lightest: #00f;
+        --steam-purple: #a0f;
+        --steam-purple-light: #c0f;
+        --steam-purple-lighter: #e0f;
+        --steam-purple-lightest: #f0f;
+        --steam-pink: #f0a;
+        --steam-pink-light: #f0c;
+
+        --steam-font: 'Open Sans', sans-serif;
+        --steam-font-size-sm: 14px;
+        --steam-font-size-md: 16px;
+        --steam-font-size-lg: 18px;
+    }
+    body {
+        font-family: var(--steam-font);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--steam-black);
+    }
+    .Steam {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .Steam__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .Steam__logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .Steam__title {
+        font-size: var(--steam-font-size-lg);
+        margin: 0;
+        color: var(--steam-white);
+    }
+    .Steam__content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: var(--steam-grey);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .Steam__content__left {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+    }
+    .Steam__content__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Steam__content__title {
+        font-size: var(--steam-font-size-lg);
+        margin: 0;
+        color: var(--steam-white);
+    }
+    .Steam__content__description {
+        font-size: var(--steam-font-size-sm);
+        margin: 0;
+        margin-bottom: 20px;
+        color: var(--steam-grey-lightest);
+    }
+    .Steam__content__buttons {
+        display: flex;
+        gap: 10px;
+    }
+    .Steam__content__button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--steam-blue);
+        color: var(--steam-white);
+        font-size: var(--steam-font-size-md);
+        cursor: pointer;
+    }
+    .Steam__content__button:hover {
+        background-color: var(--steam-blue-light);
+    }
+    .Steam__content__button:active {
+        background-color: var(--steam-blue-lighter);
+    }
+    .Steam__content__button:focus {
+        outline: none;
+    }
+    .Steam__content__button:last-child {
+        background-color: var(--steam-green);
+    }
+    .Steam__content__button:last-child:hover {
+        background-color: var(--steam-green-light);
+    }
+    .Steam__content__button:last-child:active {
+        background-color: var(--steam-green-lighter);
+    }
+    .Steam__content__button:last-child:focus {
+        outline: none;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        .Steam__content {
+            flex-direction: column;
+        }
+        .Steam__content__left {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        .Steam__content__right {
+            width: 100%;
+        }
+    }
+    
+</style>
+<title>Document</title>
+</head>
+<body>
+    <div class="Steam">
+        <div class="Steam__header">
+            <div class="Steam__logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam Logo">
+            </div>
+            <h1 class="Steam__title">Steam</h1>
+        </div>
+        <div class="Steam__content">
+            <div class="Steam__content__left">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam Logo">
+            </div>
+            <div class="Steam__content__right">
+                <h2 class="Steam__content__title">Fallout 4</h2>
+                <p class="Steam__content__description">Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.</p>
+                <div class="Steam__content__buttons">
+                    <button class="Steam__content__button">Add to Cart</button>
+                    <button class="Steam__content__button">Play</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

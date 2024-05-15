@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --steam-header: #171d25;
+        --steam-fount1: #c5c3c0;
+        --steam-button: #6c94a0;
+        --steam-font: 'Open Sans', sans-serif;
+        --smm : 6px;
+        --sm : 14px;
+        --md : 16px;
+        --lg : 18px;
+    }
+    body {
+        font-family: var(--steam-font);
+        margin: 0;
+        padding: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #213246;
+    }
+    .Steam__header{
+        background-color: var(--steam-header);
+        color: var(--steam-header);
+        display: flex;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .Steam__logo{
+        width: 200px;
+        height: 80px;
+        margin-bottom: 50px;
+    }
+    .wishlist{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: var(--steam-fount1);
+        width: 100%;
+    }
+    .wishlist_button{
+        color: white;
+        font-size: var(--md);
+        margin-right: 10px;
+        border: none;
+        background-color: var(--steam-button);
+        cursor: pointer;
+        padding: 2px 12px;
+        font-size: var(--smm);
+        font-weight: 600;
+        margin-right: 12px;
+    }
+    .store__bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1c3b7f;
+        padding: 5px 5px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .sotore_bar_button{
+        color: var(--steam-fount1);
+        font-size: 10px;
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #1c3b7f;
+        cursor: pointer;
+    }
+    .store-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-logo{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .steam-option-select{
+        color: #1a9fff;
+        font-size: var(--md);
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--steam-header);
+        cursor: pointer;
+    }
+    .steam-options{
+        color: var(--steam-fount1);
+        font-size: var(--md);
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--steam-header);
+        cursor: pointer;
+    }
+    .Steam_h_buttons_2{
+        color: var(--steam-fount1);
+        font-size: var(--smm);
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #272d37;
+        cursor: pointer;
+        display:inline-flex;
+    }
+    .Steam__h__buttons{
+        color: var(--steam-fount1);
+        font-size: var(--sm);
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--steam-header);
+        cursor: pointer;
+        height: auto;
+
+    }
+    .Steam__h__buttons:hover{
+        background-color: #1b1f27;
+    }
+    .Steam__h__buttons__img{
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+    .store_bar_search{
+        color:#0e1c25;
+        font-size: var(--md);
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color:#316282;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .Game-content{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .Game-Multimedia{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .Game-Info{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .Game-image{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .carousel {
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .carousel-images {
+    display: flex;
+    }
+
+    .carousel-images img {
+    width: 100%;
+    display: none;
+    }
+
+    .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    }
+
+    .prev {
+    left: 0;
+    }
+
+    .next {
+    right: 0;
+    }
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="Steam">
+        <div class="Steam__header">
+            <a href="https://store.steampowered.com/">
+                <img src="./images/Logos/steam_logo1.png" alt="Steam__Logo" class="Steam__logo">
+            </a>
+            <button class="steam-option-select" onclick="window.location.href='https://store.steampowered.com/'">
+                <u>STORE</u>
+            </button>
+            <button class="Steam__h__buttons steam-options" onclick="window.location.href='https://steamcommunity.com/'">COMMUNITY</button>
+            <button class="Steam__h__buttons steam-options" onclick="window.location.href='https://steamcommunity.com/profiles/76561198810998977/home/'">YOSHINO</button>
+            <button class="Steam__h__buttons steam-options" onclick="window.location.href='https://steamcommunity.com/chat/'">CHAT</button>
+            <button class="Steam__h__buttons steam-options" onclick="window.location.href='https://help.steampowered.com/es/'">SUPPORT</button>
+            
+            <button class="Steam_h_buttons_2" onclick="window.location.href='https://store.steampowered.com/about/'">
+                <img src="./images/Logos/Descargasteam.png" alt="DescargarSteam" class="Steam__h__buttons__img">
+                <h2 class="Steam__h__buttons__text">INSTALL STEAM</h2>
+            </button>
+            <button class="Steam_h_buttons_2">
+                <img src="./images/Logos/campanitasteam.png" alt="CampanitasSteam" class="Steam__h__buttons__img">
+            </button>
+            <button class="Steam__h__buttons">
+               <h2 class="Steam__h__buttons__text">Yoshino ▼</h2>
+            </button>
+            <button class="Steam__h__buttons" onclick="window.location.href='https://store.steampowered.com/account/store_transactions/'">
+                <h2 class="Steam__h__buttons__text">COL$ 0,64</h2>
+            </button>
+            <button class="Steam__h__buttons" onclick="window.location.href='https://steamcommunity.com/profiles/76561198810998977/'">
+                <img src="./images/Logos/Perfilyoshino.jpg" alt="SteamWallet" class="Steam__h__buttons__img">
+        </div>
+        <div class="wishlist">
+            <button class="wishlist_button">
+                <h2 class="wishlist_button_text">Wishlist (6)</h2>
+        </div>
+        <div class="store__bar">
+                <button class="sotore_bar_button store-image">
+                    <img src="./images/Logos/Perfilyoshino.jpg" alt="Steam__Logo" class="profile-logo">
+                    <h2 class="store_bar_button_text">Your Store</h2>
+                </button>
+                <button class="sotore_bar_button">
+                    <h2 class="store_bar_button_text">New & Noteworthy</h2>
+                </button> 
+                <button class="sotore_bar_button">
+                    <h2 class="store_bar_button_text">Categories</h2>
+                </button>
+                <button class="sotore_bar_button">
+                    <h2 class="store_bar_button_text">Points Shop</h2>
+                </button>
+                <button class="sotore_bar_button">
+                    <h2 class="store_bar_button_text">News</h2>
+                </button>
+                <button class="sotore_bar_button">
+                    <h2 class="store_bar_button_text">Labs</h2>
+                </button>
+                <input type="search" class="store_bar_search" placeholder="Search">
+                    <button class="sotore_bar_button">
+                        <img src="./images/Logos/Steam_Search.jpg">
+                    </button>
+                </input>
+        </div>
+        <div class="Game-content">
+            <div class="Game-Multimedia">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="./images/Logos/Fallout4-1.jpg" alt="Imagen 1">
+                        <img src="./images/Logos/Fallout4-2.jpg" alt="Imagen 2">
+                        <img src="./images/Logos/Fallout4-3.jpg" alt="Imagen 3">
+                        <!-- Add more images as needed -->
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">❮</button>
+                    <button class="next" onclick="moveSlide(1)">❯</button>
+                </div>
+            </div>
+            <div class="Game-Info">
+                <img clas='Game-image' src="./images/Logos/Fallout4_title.jpg" alt="Fallout 4">
+                <p class="Game-Description">Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.</p>
+                <table>
+                    <tr>
+                        <td>
+                            <button class="Game-Details-Button">
+                                <h2 class="Review">Recent Reviews</h2>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="Game-Details-Button">
+                                <h2 class="Review">All Reviews</h2>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+        <script src="script.js" defer></script>
+    </div>
+</body>
+</html>
